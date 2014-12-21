@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141220205943) do
+ActiveRecord::Schema.define(version: 20141220212242) do
 
   create_table "api_keys", force: true do |t|
     t.integer  "user_id"
     t.string   "access_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.decimal  "latitude",   precision: 10, scale: 6
+    t.decimal  "longitude",  precision: 10, scale: 6
     t.datetime "created_at"
     t.datetime "updated_at"
   end

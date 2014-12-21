@@ -6,6 +6,9 @@ gem 'rails', '4.0.5'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'sqlite3'
+
+	# To load .env into the environment on development machines
+	gem 'dotenv-rails'
 end
 group :production do
 	gem 'pg'
